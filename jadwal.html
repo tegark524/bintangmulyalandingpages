@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kursus Mengemudi Bintang Mulya</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container nav-container">
+            <img src="assets/logo.png" alt="Logo" style="height: 50px;" />
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="program.html">Paket Kursus</a></li>
+                    <li><a href="jadwal.html">Jadwal</a></li>
+                    <li><a href="daftar.html">Daftar</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="kontainer">
+        <div class="container">
+            <h2 class="judul" style="text-align: center;">Jadwal Operasional & Latihan</h2>
+            <p class="subjudul" style="text-align: center;">Berikut ini adalah jadwal kantor dan latihan mengemudi di
+                Bintang Mulya</p>
+
+            <div class="table-wrapper">
+                <table class="jadwal-table">
+                    <thead>
+                        <tr>
+                            <th>Jam</th>
+                            <th>Kantor</th>
+                            <th>Latihan Mengemudi</th>
+                            <th class="minggu-col">Minggu / Tgl Merah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>07.00 - 08.00</td>
+                            <td>-</td>
+                            <td>✔</td>
+                            <td rowspan="10">Sesuai Kondisi / Perjanjian</td>
+                        </tr>
+                        <tr>
+                            <td>08.00 - 09.00</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>09.00 - 10.00</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>10.00 - 11.00</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>11.00 - 12.00</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>12.00 - 13.00</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>13.00 - 14.00</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>14.00 - 15.00</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>15.00 - 16.00</td>
+                            <td>-</td>
+                            <td>✔</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="jadwal-note">
+                <h3>📝 Catatan:</h3>
+                <ul>
+                    <li>Jam kantor: Senin - Sabtu, pukul <strong>08.00 - 15.00</strong></li>
+                    <li>Latihan bisa dimulai dari <strong>07.00 - 16.00</strong></li>
+                    <li>Minggu dan tanggal merah <strong>fleksibel sesuai kesepakatan</strong></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+
+        // Highlight active menu item based on current page
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPage = location.pathname.split('/').pop();
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+
+
+<footer>
+    <p>&copy; 2025 BINTANG MULYA. All rights reserved.</p>
+</footer>
+
+</html>

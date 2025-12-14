@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kursus Mengemudi Bintang Mulya</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container nav-container">
+            <img src="assets/logo.png" alt="Logo" style="height: 50px;" />
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="program.html">Paket Kursus</a></li>
+                    <li><a href="jadwal.html">Jadwal</a></li>
+                    <li><a href="daftar.html">Daftar</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-hero">
+            <div class="container">
+                <h1 style="text-align: center;">Hubungi Kami</h1>
+                <p style="text-align: center;"> Kami siap membantu Anda dalam proses belajar mengemudi. Silakan
+                    hubungi kami melalui salah satu
+                    kontak berikut.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h2 style="text-align: center;">Kontak WhatsApp</h2>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>Customer Service 1</strong>
+                            <p><a href="https://wa.me/6281249408770" class="contact-link">+62 812-4940-8770</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>Customer Service 2</strong>
+                            <p><a href="https://wa.me/6285150626257" class="contact-link">+62 851-5062-6257</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <h2 style="text-align: center;">Media Sosial</h2>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><img
+                                src=https://img.icons8.com/?size=100&id=32309&format=png&color=000000
+                                alt="WhatsApp Icon" width="25">
+                        </div>
+                        <div>
+                            <strong>Instagram</strong>
+                            <p><a href="https://www.instagram.com/bintang_mulya_ngawi/"
+                                    class="contact-link">@bintang_mulya_ngawi</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><img
+                                src=https://img.icons8.com/?size=100&id=118467&format=png&color=000000
+                                alt="Facebook Icon" width="30"></div>
+                        <div>
+                            <strong>Facebook</strong>
+                            <p><a href="https://www.facebook.com/share/1XPU5Ntmqk/" class="contact-link">Bintang Mulya
+                                    Ngawi</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <h2 style="text-align: center;">Lokasi Kami</h2>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><img
+                                src="https://img.icons8.com/?size=100&id=85149&format=png&color=000000" alt="Maps icons"
+                                width="30"></div>
+                        <div>
+                            <strong>Alamat</strong>
+                            <br><a href="https://maps.app.goo.gl/v3Wy1cPjqfaTWADk8">Jl. A.Yani GG dahlia 2 no 6
+                                Ngawi</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon"><img
+                                src="https://img.icons8.com/?size=100&id=83139&format=png&color=000000"
+                                alt="jadwal Icon" width="30"></div>
+                        <P><strong>jadwal</strong>
+                            <br><a href="jadwal.html">Jadwal lebih lanjut</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BINTANG MULYA. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+
+        // Highlight active menu item based on current page
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPage = location.pathname.split('/').pop();
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

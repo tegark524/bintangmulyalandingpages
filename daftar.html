@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kursus Mengemudi Bintang Mulya</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container nav-container">
+            <img src="assets/logo.png" alt="Logo" style="height: 50px;" />
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="program.html">Paket Kursus</a></li>
+                    <li><a href="jadwal.html">Jadwal</a></li>
+                    <li><a href="daftar.html">Daftar</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Formulir Pendaftaran</h2>
+            <form id="pendaftaranForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" placeholder="Contoh: Joko Agus" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hp">Nomor Handphone:</label>
+                        <input type="tel" id="hp" name="hp" placeholder="Contoh: 08123456789" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat Lengkap:</label>
+                    <textarea id="alamat" name="alamat" rows="3" placeholder="Contoh: Jl. A. Yani Gg Dahlia 2 No. 15"
+                        required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pilihan">Jenis Mobil:</label>
+                        <select id="pilihan" name="pilihan" required>
+                            <option value="">-- Pilih --</option>
+                            <option value="Mobil Manual">Mobil Manual</option>
+                            <option value="Mobil Matic">Mobil Matic</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paket">Paket Belajar:</label>
+                        <select id="paket" name="paket" required>
+                            <option value="">-- Pilih --</option>
+                            <option value="3x Pertemuan">3x Pertemuan</option>
+                            <option value="5x Pertemuan">5x Pertemuan</option>
+                            <option value="7x Pertemuan">7x Pertemuan</option>
+                            <option value="10x Pertemuan">10x Pertemuan</option>
+                            <option value="12x Pertemuan">12x Pertemuan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hari">Hari:</label>
+                        <select id="hari" name="hari" required>
+                            <option value="">-- Pilih --</option>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jumat">Jumat</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Mulai:</label>
+                        <input type="date" id="tanggal" name="tanggal" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jam">Jam Belajar:</label>
+                    <select id="jam" name="jam" required>
+                        <option value="">-- Pilih --</option>
+                        <option value="07:00 - 08:00">07:00 - 08:00</option>
+                        <option value="08:00 - 09:00">08:00 - 09:00</option>
+                        <option value="09:00 - 10:00">09:00 - 10:00</option>
+                        <option value="10:00 - 11:00">10:00 - 11:00</option>
+                        <option value="11:00 - 12:00">11:00 - 12:00</option>
+                        <option value="12:00 - 13:00">12:00 - 13:00</option>
+                        <option value="13:00 - 14:00">13:00 - 14:00</option>
+                        <option value="14:00 - 15:00">14:00 - 15:00</option>
+                        <option value="15:00 - 16:00">15:00 - 16:00</option>
+                    </select>
+                </div>
+
+                <button type="button" class="whatsapp-btn" style="vertical-align: middle;"
+                    onclick="kirimWhatsApp()"><img src=https://img.icons8.com/?size=100&id=85088&format=png&color=FFFFFF
+                        alt="WhatsApp Icon" width="15">
+                    Kirim via WhatsApp </i></button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BINTANG MULYA. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function kirimWhatsApp() {
+            // Ambil nilai dari form
+            const nama = document.getElementById('nama').value;
+            const hp = document.getElementById('hp').value;
+            const alamat = document.getElementById('alamat').value;
+            const pilihan = document.getElementById('pilihan').value;
+            const paket = document.getElementById('paket').value;
+            const hari = document.getElementById('hari').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const jam = document.getElementById('jam').value;
+
+            // Format tanggal menjadi lebih mudah dibaca
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const tanggalFormatted = new Date(tanggal).toLocaleDateString('id-ID', options);
+
+            // Format pesan WhatsApp
+            const pesan = `*PENDAFTARAN KURSUS MENGEMUDI*
+            
+📋 *Data Pendaftar:*
+▸ Nama Lengkap: ${nama}
+▸ Nomor HP: ${hp}
+▸ Alamat: ${alamat}
+
+🚗 *Detail Kursus:*
+▸ Jenis Mobil: ${pilihan}
+▸ Paket Belajar: ${paket}
+▸ Jadwal: ${hari}, ${tanggalFormatted}
+▸ Jam: ${jam}
+
+_Saya berminat untuk mendaftar kursus mengemudi di Bintang Mulya. Mohon info lebih lanjut. Terima kasih._`;
+
+            // Encode pesan untuk URL
+            const pesanEncoded = encodeURIComponent(pesan);
+
+            // Nomor tujuan WhatsApp
+            const nomorWhatsApp = '6281231047889';
+
+            // Buat link WhatsApp
+            const linkWhatsApp = `https://wa.me/${nomorWhatsApp}?text=${pesanEncoded}`;
+
+            // Buka WhatsApp
+            window.open(linkWhatsApp, '_blank');
+        }
+
+        // Set tanggal minimum ke hari ini
+        document.getElementById('tanggal').min = new Date().toISOString().split("T")[0];
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+
+        // Highlight active menu item based on current page
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPage = location.pathname.split('/').pop();
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kursus Mengemudi Bintang Mulya</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="nav-container">
+            <img src="assets/logo.png" alt="Logo" style="height: 50px;" />
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="program.html">Paket Kursus</a></li>
+                    <li><a href="jadwal.html">Jadwal</a></li>
+                    <li><a href="daftar.html">Daftar</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>Harga Kursus Mobil Manual</h2>
+        <div class="table-wrapper">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Jumlah Pertemuan</th>
+                        <th>Durasi / Pertemuan</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Paket 3x</td>
+                        <td>3 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 210.000</td>
+                    </tr>
+                    <tr>
+                        <td>Paket 5x</td>
+                        <td>5 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 350.000</td>
+                    </tr>
+                    <tr>
+                        <td>Paket 7x</td>
+                        <td>7 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 490.000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Paket 10x</td>
+                        <td>10 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 700.000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Paket 12x</td>
+                        <td>12 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 820.000</td>
+                    </tr>
+                    <tr>
+                        <td>Paket 15x</td>
+                        <td>15 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 900.000</td>
+                    </tr>
+                    <tr>
+                        <td>Tambahan</td>
+                        <td>1 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 70.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h4><i>*Minimal ambil paket 3x dalam sekali pendaftaran</i></h4>
+        </div>
+        <h2>Harga Kursus Mobil Matic</h2>
+        <div class="table-wrapper">
+            <table class="pricing-table ">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Jumlah Pertemuan</th>
+                        <th>Durasi / Pertemuan</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Paket 3x</td>
+                        <td>3 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 225.000</td>
+                    </tr>
+                    <tr>
+                        <td>Paket 5x</td>
+                        <td>5 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 375.000</td>
+                    </tr>
+                    <tr>
+                        <td>Paket 7x</td>
+                        <td>7 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 525.000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Paket 10x</td>
+                        <td>10 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 750.000</td>
+                    </tr>
+                    <tr>
+                        <td>Paket 12x</td>
+                        <td>12 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 900.000</td>
+                    </tr>
+                    <tr>
+                        <td>Tambahan</td>
+                        <td>1 Pertemuan</td>
+                        <td>60 Menit</td>
+                        <td>Rp 75.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h4><i>*Minimal ambil paket 3x dalam sekali pendaftaran</i></h4>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BINTANG MULYA. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+
+        // Highlight active menu item based on current page
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPage = location.pathname.split('/').pop();
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
